@@ -16,3 +16,22 @@ var merge = function(intervals) {
 
     return ans;
 };
+
+
+// leader in an array (evething on the right should be smaller);
+
+
+function leaderInArray(array){
+    const leader= [];
+    for(let i = 0; i < array.length; i++){
+        let isLeader = true;
+        for(let j = i+1; j < array.length;j++){
+            if(array[i] < array[j]){
+                isLeader = false
+            }
+        }
+        if(isLeader){
+            leader.push(array[i]);
+        }
+    }
+}
